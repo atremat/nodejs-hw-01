@@ -11,7 +11,7 @@ const generateContacts = async (number) => {
       contacts.push(createFakeContact());
     }
 
-    await fs.writeFile(PATH_DB, JSON.stringify(contacts), 'utf8');
+    await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), 'utf8');
   } catch (err) {
     console.log('Error while adding new contacts: ', err);
   }
